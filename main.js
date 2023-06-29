@@ -1,19 +1,11 @@
-
-var arr = [2, 4, 6, 8];
-average(arr);
-function average(arr)
-{
-    if (arr.length == 0)
-    console.error("Array is empty");
-    else
-    {
-        var sum = 0;
-        for(var i = 0; i < arr.length; i++)
-        {
-            sum += arr[i];
-        }
-        var averageNum = sum / arr.length;
-        console.log("Average: " + averageNum);  
-    }  
-}
-
+var age = 10;
+if (age < 0)
+console.error("Age can't be negative!!!");
+else if (age >= 2 && age <= 14)
+console.log("Kids drink juice");
+else if (age > 14 && age < 18)
+console.log("Teens drink coke");
+else if (age >= 18 && age < 21)
+console.log("Young adults drink beer");
+else if (age >= 21)
+console.log("Adults drink whisky");
