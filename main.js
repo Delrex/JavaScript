@@ -1,18 +1,17 @@
-var arr = [5, 2, 9, 3, 7];
-replacement(arr);
-function replacement(arr)
+var bullets = Math.random(0, 20);
+var dragons = Math.random(2, 5); 
+var isAlive = fight(bullets,dragons,isAlive);
+function fight(bullets,dragons,isAlive)
 {
-    if (arr.length == 0)
-    console.error("Array is empty");
+    var result = (bullets/2)/dragons;
+    console.log(result);
+    if(result >= 1)
+    {
+        return isAlive = true;
+    }
     else
     {
-        for(var i = 0; i < arr.length; i++)
-        {
-            if(arr[i] <= 5)
-            arr[i] = 0;
-            else
-            arr[i] = 1;
-        }
+        return isAlive = false;
     }
-    console.log(arr);
 }
+console.log(isAlive);
