@@ -1,13 +1,8 @@
-var n = 2;
-var m = 9;
-var sum = 0;
-if (n < m)
+
+var n = 67;
+getChar(n);
+function getChar (n)
 {
-    for(var i = n; i < m; i+=n)
-    {
-        sum +=i;
-    }
-    console.log("Сумма " + sum);
+    var char = String.fromCharCode(n)
+    console.log("Char: " + char);
 }
-else
-console.error("Занчение m меньше n!!!")
