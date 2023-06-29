@@ -1,17 +1,17 @@
-var bullets = Math.random(0, 20);
-var dragons = Math.random(2, 5); 
-var isAlive = fight(bullets,dragons,isAlive);
-function fight(bullets,dragons,isAlive)
+let str1 = "Aa";
+let str2 = "Bb";
+let str3 = "Cc";
+let output = separation(str1,str2,str3);
+console.log(output);
+
+function separation(str1,str2,str3)
 {
-    var result = (bullets/2)/dragons;
-    console.log(result);
-    if(result >= 1)
+    let result = '';
+    let calculation;
+    for (let i = 0; i <= str1.length-1; i++)
     {
-        return isAlive = true;
+        calculation = str1[i] + str2[i] + str3[i];
+        result += calculation;
     }
-    else
-    {
-        return isAlive = false;
-    }
+    return result;
 }
-console.log(isAlive);
