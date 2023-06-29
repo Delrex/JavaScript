@@ -1,26 +1,18 @@
-var yourMark = 8;
-var isMarkBest = false;
-var marks = [5, 6, 9, 6, 7];
-average(marks,yourMark);
-
-function average(marks,yourMark)
+var arr = [5, 2, 9, 3, 7];
+replacement(arr);
+function replacement(arr)
 {
-    if (marks.length == 0)
+    if (arr.length == 0)
     console.error("Array is empty");
     else
     {
-        var sum = 0;
-        marks.push(yourMark);
-        for(var i = 0; i < marks.length; i++)
+        for(var i = 0; i < arr.length; i++)
         {
-            sum += marks[i];
+            if(arr[i] <= 5)
+            arr[i] = 0;
+            else
+            arr[i] = 1;
         }
-        var averageMark = sum / marks.length;
-        console.log("Average mark: " + averageMark);
-        if(yourMark > averageMark)
-        return isMarkBest = true;
-        else 
-        return isMarkBest;
-    }  
+    }
+    console.log(arr);
 }
-console.log("Your score is above average? " + isMarkBest);
